@@ -3,7 +3,7 @@
 //// Variaveis globais
 // Pinos (possibilidade de comutação)
 uint8_t slave_id = 1;
-uint8_t re_de_pin = 8;
+uint8_t re_de_pin = 2;
 
 // Máximo tempo de espera (em ms) depois da mensagem terminar de ser recebida
 uint16_t max_wait = 200;
