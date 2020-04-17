@@ -1,4 +1,4 @@
-#include "MODBUS_RTU_SLAVE.h"
+#include "modbus_rtu_slave.h"
 
 #define RE_DE 8
 #define SLAVE_ADDRS 1
