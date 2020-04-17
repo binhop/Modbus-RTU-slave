@@ -1,28 +1,28 @@
 Biblioteca MODBUS RTU para escravo via RS485
-Os pinos 0 e 1 são utilizados para a comunicação serial
+Os pinos 0 e 1 sÃ£o utilizados para a comunicaÃ§Ã£o serial
 
-A biblioteca possui resposta para os códigos:
-1 - Leitura bits de saída
+A biblioteca possui resposta para os cÃ³digos:
+1 - Leitura bits de saÃ­da
 3 - Leitura registrador holding
 6 - Escrita unica registrador holding
 
-•Para utilizar, basta inicializar a comunicação:
+â€¢Para utilizar, basta inicializar a comunicaÃ§Ã£o:
 
-void modbus_init(baudrate, pino re_de, endereço do slave)
+void modbus_init(baudrate, pino re_de, endereÃ§o do slave)
 
-• A biblioteca inicializa os coils e os registradores holding com valor 0. Para alterar seus valores, basta utilizar:
+â€¢ A biblioteca inicializa os coils e os holding registers com valor 0. Para alterar seus valores, basta utilizar:
 
-modbus_update_coil(posiçao, valor desejado);
-modbus_update_holding(posiçao, desejado);
+modbus_update_coil(posiÃ§ao, valor desejado);
+modbus_update_holding(posiÃ§ao, desejado);
 
-• Para rodar a rotina de verificação, basta adicionar no loop principal:
+â€¢ Para rodar a rotina de verificaÃ§Ã£o, basta adicionar no loop principal:
 
 modbus_check();
 
-• Para obter qualquer dado da mensagem, utilize a estrutura msg:
+â€¢ Para obter qualquer dado da mensagem, utilize a estrutura msg:
 
 msg.id; // ID da mensagem
-msg.fc; // Código da função;
-msg.reg; // Endereço do registrador requisitado
+msg.fc; // CÃ³digo da funÃ§Ã£o;
+msg.reg; // EndereÃ§o do registrador requisitado
 msg.data; // Dado recebido
 msg.CRC; // CRC da mensagem
