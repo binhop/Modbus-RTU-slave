@@ -8,7 +8,9 @@
 #define REG_SIZE 20
 
 // Prototipo das funções
+uint8_t modbus_read_coil(uint8_t pos);
 void modbus_update_coil(uint8_t pos, uint8_t val);
+uint16_t modbus_read_holding(uint8_t pos);
 void modbus_update_holding(uint8_t pos, uint16_t val);
 
 void modbus_init(uint16_t baudrate, uint8_t re_de, uint8_t slave_idd);

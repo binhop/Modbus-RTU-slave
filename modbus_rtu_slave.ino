@@ -32,6 +32,15 @@ uint8_t *p_msg = &msg.id;
 uint8_t rg_outbits[REG_SIZE] = {0};
 uint16_t rg_holding[REG_SIZE] = {0};
 
+/*
+ * Lê o valor de um coil
+ * Parâmetro:
+ *  - pos: posição relativa do registrador
+ */
+uint8_t modbus_read_coil(uint8_t pos)
+{
+  return rg_outbits[pos%REG_SIZE];
+}
 
 /*
  * Atualiza o valor de um coil
@@ -46,6 +55,16 @@ void modbus_update_coil(uint8_t pos, uint8_t val)
   rg_outbits[pos] = val;
 }
 
+
+/*
+ * Lê o valor de um reg holding
+ * Parâmetro:
+ *  - pos: posição relativa do registrador
+ */
+uint16_t modbus_read_holding(uint8_t pos)
+{
+  return rg_holding[pos%REG_SIZE];
+}
 
 /*
  * Atualiza o valor de um reg holding
