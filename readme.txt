@@ -15,7 +15,7 @@ void modbus_init(baudrate, pino re_de, endereço do slave)
 modbus_update_coil(posiçao, valor desejado);
 modbus_update_holding(posiçao, desejado);
 
-• Para ler o valores dos registradores, existem as funções abaixo:
+• Para ler os valores dos registradores, existem as funções abaixo:
 
 modbus_read_coil(posiçao); // Retorna um valor inteiro positivo de 8 bits (uint8_t)
 
